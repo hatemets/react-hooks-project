@@ -5,6 +5,7 @@ import PostContextProvider from './contexts/PostContext';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import PostDetails from './components/PostDetails';
 import NewPost from './components/NewPost';
+import ModifyPost from './components/ModifyPost';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/new_post' component={NewPost} />
+            <Route path='/:post_id/modify_post' component={ModifyPost} />
             <Route path='/:post_id' component={PostDetails} />
             </Switch>
           </PostContextProvider>

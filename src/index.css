@@ -13,6 +13,8 @@ code {
     monospace;
 }
 
+/* Posts */
+
 .post {
   margin-top: 30px !important;
   border-radius: 8px;
@@ -24,4 +26,8 @@ code {
 
 .new-post-inputs {
   padding: 20px 0 !important;
+}
+
+button {
+  margin: 0 10px;
 }

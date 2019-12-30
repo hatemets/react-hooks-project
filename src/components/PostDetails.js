@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { postContext } from '../contexts/PostContext'
+import { Link } from 'react-router-dom';
 
 
 const PostDetails = (props) => {
@@ -7,7 +8,7 @@ const PostDetails = (props) => {
   const {posts, dispatch} = useContext(postContext);
   const [post] = posts.filter(post => Number(post.id) === id)
 
-  const handleClick = () => {
+  const handleDelete = () => {
     dispatch({type: 'REMOVE_POST', id})
     props.history.push('/')
   }
@@ -20,7 +21,8 @@ const PostDetails = (props) => {
           <p>{post.body}</p>
         </div>
         <div className="card-action">
-          <button onClick={handleClick} className="btn red waves-effect waves-light">delete post</button>
+          <button onClick={handleDelete} className="btn red darken-2 waves-effect waves-light">delete</button>
+          <Link to={`/${post.id}/modify_post`} className="btn yellow darken-3 waves-effect waves-light">modify</Link>
         </div>
       </div>
     </div>
