@@ -4,8 +4,7 @@ import rootReducer from '../reducers/RootReducer'
 export const postContext = createContext();
 
 const PostContextProvider = (props) => {
-  const [posts, dispatch] = useReducer(rootReducer, [
-  ])
+  const [posts, dispatch] = useReducer(rootReducer, [])
 
   return (
     <postContext.Provider value={{posts, dispatch}}>

@@ -7,7 +7,7 @@ const rootReducer = (state, action) => {
       body: action.post.body,
       id: randomId(10, '0')}]
     case 'REMOVE_POST':
-      return state.filter(post => post.id !== action.id)
+      return state.filter(post => Number(post.id) !== action.id)
     default:
       return state;
   }
