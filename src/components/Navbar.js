@@ -15,7 +15,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className="navbar blue-grey">
+      <nav className="navbar blue darken-2">
         <div className="container">
           <a href="/#" className="brand-logo">Dog Food</a>
           <a href="/#" className="sidenav-trigger" data-target="mobile-nav">

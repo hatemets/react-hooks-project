@@ -1,14 +1,15 @@
 import React, { useContext } from 'react'
 import { postContext } from '../contexts/PostContext'
+import { Link } from 'react-router-dom'
 
 const Home = (props) => {
   const {posts} = useContext(postContext)
   console.log(posts);
 
   const postList = posts.length ? posts.map(post =>
-    <div className="card hoverable center" key={post.id}>
+    <div className="card hoverable center post" key={post.id}>
       <div className="card-content">
-        <span className="card-title"><a href="/#">{post.title}</a></span>
+        <span className="card-title"><Link to={`/${post.id}`}>{post.title}</Link></span>
         <p>{post.body}</p>
       </div>
     </div>
@@ -16,7 +17,6 @@ const Home = (props) => {
 
   return (
     <div className="container center">
-      <h1>Posts</h1>
       {postList}
     </div>
   )
