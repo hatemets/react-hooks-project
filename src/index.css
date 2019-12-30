@@ -17,3 +17,11 @@ code {
   margin-top: 30px !important;
   border-radius: 8px;
 }
+
+#new-post {
+  margin-top: 30px !important;
+}
+
+.new-post-inputs {
+  padding: 20px 0 !important;
+}

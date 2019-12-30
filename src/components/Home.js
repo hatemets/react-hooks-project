@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 const Home = (props) => {
   const {posts} = useContext(postContext)
-  console.log(posts);
 
   const postList = posts.length ? posts.map(post =>
     <div className="card hoverable center post" key={post.id}>
@@ -13,7 +12,10 @@ const Home = (props) => {
         <p>{post.body}</p>
       </div>
     </div>
-    ) : <div className="container"><p className="flow-text">There are currently no posts</p></div>
+    ) : <div className="container">
+          <p className="flow-text">There are currently no posts</p>
+          <Link to='/new_post' className="btn green pulse">Create new post</Link>
+        </div>
 
   return (
     <div className="container center">

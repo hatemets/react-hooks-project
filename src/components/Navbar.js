@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import M from 'materialize-css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   useEffect(() => {
@@ -8,19 +9,19 @@ const Navbar = () => {
   }, [])
 
   const navLinks = <div>
-    <li><a href="/#">Home</a></li>
-    <li><a href="/#">Profile</a></li>
-    <li><a href="/#">New Post</a></li>
+    <li><Link to='/' className="sidenav-close">Home</Link></li>
+    <li><Link to='/' className="sidenav-close">Profile</Link></li>
+    <li><Link to='/new_post' className="sidenav-close">New Post</Link></li>
     </div>
 
   return (
     <header>
       <nav className="navbar blue darken-2">
         <div className="container">
-          <a href="/#" className="brand-logo">Dog Food</a>
-          <a href="/#" className="sidenav-trigger" data-target="mobile-nav">
+          <Link to='/' className="brand-logo">Dog Food</Link>
+          <Link to='/' className="sidenav-trigger" data-target="mobile-nav">
             <i className="material-icons">menu</i>
-          </a>
+          </Link>
 
           <ul className="right hide-on-med-and-down">
             {navLinks}

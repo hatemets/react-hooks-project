@@ -1,11 +1,11 @@
-import React, { useContext, useReducer } from 'react'
+import React, { useContext } from 'react'
 import { postContext } from '../contexts/PostContext'
 
 
 const PostDetails = (props) => {
   let id = Number(props.match.params.post_id);
-  const {posts} = useContext(postContext);
-  const [post] = posts.filter(post => post.id === id)
+  const {posts, dispatch} = useContext(postContext);
+  const [post] = posts.filter(post => Number(post.id) === id)
 
   return (
     <div className="container center">
