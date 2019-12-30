@@ -8,10 +8,10 @@ const NewPost = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({type: 'ADD_POST', post: {title, body}})
-    props.history.push('/')
-    setBody('')
-    setTitle('')
+    dispatch({type: 'ADD_POST', post: {title, body}});
+    props.history.push('/');
+    setBody('');
+    setTitle('');
   }
 
   return (
