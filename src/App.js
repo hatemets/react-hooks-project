@@ -14,10 +14,10 @@ function App() {
         <Navbar />
           <PostContextProvider>
             <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/new_post' component={NewPost} />
-            <Route path='/:post_id/modify_post' component={ModifyPost} />
-            <Route path='/:post_id' component={PostDetails} />
+              <Route exact path='/' component={Home} />
+              <Route path='/new_post' component={NewPost} />
+              <Route path='/:post_id/modify_post' component={ModifyPost} />
+              <Route path='/:post_id' component={PostDetails} />
             </Switch>
           </PostContextProvider>
       </div>

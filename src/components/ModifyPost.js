@@ -4,7 +4,10 @@ import { postContext } from '../contexts/PostContext'
 const ModifyPost = (props) => {
   let id = Number(props.match.params.post_id);
   const {posts, dispatch} = useContext(postContext);
-  const [post] = posts.filter(post => post.id !== id)
+  const [post] = posts.filter(post => Number(post.id) === Number(id))
+  // console.log(posts);
+  // posts.map(post => console.log(id))
+
   const [title, setTitle] = useState(post.title);
   const [body, setBody] = useState(post.body);
 
