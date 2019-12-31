@@ -1,13 +1,17 @@
-import React, { createContext, useReducer } from 'react'
+import React, { createContext, useState } from 'react'
 import rootReducer from '../reducers/RootReducer'
 
-const themeContext = createContext();
+export const themeContext = createContext();
 
 const ThemeContextProvider = (props) => {
-    const [themes, setTheme] = useReducer(rootReducer, [])
+    const [theme, setTheme] = useState({
+        isLight: false,
+        light: {bg: '#ddd', text: '#000', els: '#ccc'},
+        dark: {bg: '#333', text: '#fff', els: '#555'}
+    })
 
     return (
-        <themeContext.Provider value={{themes, setTheme}}>
+        <themeContext.Provider value={{theme, setTheme}}>
             {props.children}
         </themeContext.Provider>
     )

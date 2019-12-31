@@ -1,12 +1,14 @@
 import React, { useContext } from 'react'
 import { postContext } from '../contexts/PostContext'
 import { Link } from 'react-router-dom';
-
+import { themeContext } from '../contexts/ThemeContext'
 
 const PostDetails = (props) => {
   let id = Number(props.match.params.post_id);
   const {posts, dispatch} = useContext(postContext);
   const [post] = posts.filter(post => Number(post.id) === id)
+  const {theme: genTheme} = useContext(themeContext)
+  const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
 
   const handleDelete = () => {
     dispatch({type: 'REMOVE_POST', id})
@@ -15,7 +17,7 @@ const PostDetails = (props) => {
 
   return (
     <div className="container center">
-      <div className="card hoverable center post" key={post.id}>
+      <div className="card hoverable center post" Style={`background: ${theme.els}; color: ${theme.text}`} key={post.id}>
         <div className="card-content">
           <span className="card-title">{post.title}</span>
           <p>{post.body}</p>
