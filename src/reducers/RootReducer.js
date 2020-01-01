@@ -10,8 +10,9 @@ const rootReducer = (state, action) => {
     case 'REMOVE_POST':
       return state.filter(post => Number(post.id) !== action.id)
     case 'CHANGE_THEME':
-      let {isLight, light, dark} = state
-      return {isLight: !isLight,
+      let {isLight, light, dark} = state;
+      if (action.color === 'dark') {var lightTheme = false} else {var lightTheme = true}
+      return {isLight: lightTheme,
               light, dark};
     default:
       return state;
