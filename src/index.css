@@ -17,6 +17,7 @@ code {
 .post {
   margin-top: 30px !important;
   border-radius: 8px;
+  color: #b5bfbf
 }
 
 #new-post {
@@ -29,4 +30,14 @@ code {
 
 button {
   margin: 0 10px;
+}
+
+/* Navbar */
+
+ul li:last-child {
+  margin-bottom: 10px;
+}
+
+.mobile-theme-btn {
+  margin-top: 8px !important;
 }
