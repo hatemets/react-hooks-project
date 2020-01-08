@@ -14,7 +14,7 @@ const Home = (props) => {
         <span className="card-title"><Link to={`/${post.id}`} Style={`color: ${theme.text}`}>{post.title}</Link></span>
         <p>{post.body}</p>
         <br/>
-        <p className="grey-text">Latest change: {post.date}</p>
+        <p>Latest change: {post.date}</p>
       </div>
     </div>
     ) : <div className="container">

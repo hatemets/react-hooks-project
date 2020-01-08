@@ -22,7 +22,7 @@ const PostDetails = (props) => {
           <span className="card-title">{post.title}</span>
           <p>{post.body}</p>
           <br/>
-          <p className="grey-text">Created: {post.date}</p>
+          <p>Created: {post.date}</p>
         </div>
         <div className="card-action">
           <button onClick={handleDelete} className="btn red darken-2 waves-effect waves-light">delete</button>
