@@ -10,8 +10,14 @@ const NewPost = (props) => {
   const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
 
   const handleSubmit = (e) => {
+    let dateObject = new Date();
+    let [month, day, year] = [dateObject.getMonth() + 1,
+                              dateObject.getUTCDate(),
+                              dateObject.getFullYear()]
+    let date = `${day}/${month}/${year}`;
+
     e.preventDefault();
-    dispatch({type: 'ADD_POST', post: {title, body}});
+    dispatch({type: 'ADD_POST', post: {title, body, date}});
     props.history.push('/');
     setBody('');
     setTitle('');
