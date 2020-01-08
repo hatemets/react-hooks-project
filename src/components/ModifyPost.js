@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { postContext } from '../contexts/PostContext'
 import { themeContext } from '../contexts/ThemeContext'
+import { date } from '../resources/time'
 
 const ModifyPost = (props) => {
   let id = Number(props.match.params.post_id);
@@ -16,7 +17,7 @@ const ModifyPost = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch({type: 'REMOVE_POST', id})
-    dispatch({type: 'ADD_POST', post: {title, body, id}});
+    dispatch({type: 'ADD_POST', post: {title, body, id, date}});
     props.history.push('/');
   }
 

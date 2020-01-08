@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { postContext } from '../contexts/PostContext'
 import { themeContext } from '../contexts/ThemeContext'
+import { date } from '../resources/time'
 
 const NewPost = (props) => {
   const {dispatch} = useContext(postContext)
@@ -10,12 +11,6 @@ const NewPost = (props) => {
   const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
 
   const handleSubmit = (e) => {
-    let dateObject = new Date();
-    let [month, day, year] = [dateObject.getMonth() + 1,
-                              dateObject.getUTCDate(),
-                              dateObject.getFullYear()]
-    let date = `${day}/${month}/${year}`;
-
     e.preventDefault();
     dispatch({type: 'ADD_POST', post: {title, body, date}});
     props.history.push('/');
