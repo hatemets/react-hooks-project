@@ -7,17 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 /* Posts */
 
-.post {
+.post, #profile, #modify {
   margin-top: 30px !important;
-  border-radius: 8px;
-  color: #b5bfbf
 }
 
 #new-post {
@@ -40,4 +33,11 @@ ul li:last-child {
 
 .mobile-theme-btn {
   margin-top: 8px !important;
+}
+
+/* Profile */
+
+.profile-pic {
+  border-radius: 15px !important;
+  padding: 10px !important;
 }
