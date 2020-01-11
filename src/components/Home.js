@@ -7,6 +7,7 @@ const Home = (props) => {
   const {posts} = useContext(postContext)
   const {theme: genTheme} = useContext(themeContext)
   const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
+  posts.sort((a, b) => b.novelty - a.novelty);
 
   const postList = posts.length ? posts.map(post =>
     <div className="card hoverable center post" key={post.id} Style={`color: ${theme.text}; background: ${theme.els}`}>
