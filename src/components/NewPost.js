@@ -19,8 +19,8 @@ const NewPost = (props) => {
   }
 
   return (
-    <div className="container center white z-depth-2 hoverable">
-      <form id="new-post" onSubmit={handleSubmit} Style={`background: ${theme.els}`}>
+    <div className="container">
+      <form id="new-post" className="z-depth-2 hoverable" onSubmit={handleSubmit} Style={`background: ${theme.els}`}>
 
         <div className="row container center-align new-post-inputs">
 

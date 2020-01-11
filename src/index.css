@@ -9,12 +9,13 @@ body {
 
 /* Posts */
 
-.post, #profile, #modify {
+.post, #profile, #modify, #new-post {
   margin-top: 30px !important;
+  max-width: 800px !important;
 }
 
-#new-post {
-  margin-top: 30px !important;
+.post, #new-post {
+  margin: 30px auto 0 auto !important;
 }
 
 .new-post-inputs {
@@ -40,4 +41,9 @@ ul li:last-child {
 .profile-pic {
   border-radius: 15px !important;
   padding: 10px !important;
+}
+
+#profile > p {
+  margin: 0;
+  padding: 15px 0 5px 0 !important;
 }

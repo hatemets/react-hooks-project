@@ -10,11 +10,13 @@ const Profile = () => {
   return (
     <div id="profile" className="container row" Style={`${themeText}; ${themeBackground}`}>
 
+        <p className="flow-text center hide-on-med-and-up">Profile Info</p>
+
         <img className="profile-pic col s10 offset-s1 m6 responsive-img" src={require('../media/resort.jpg')} alt="profile pic"/>
 
         <div className="col m6 s12">
             <form className="row">
-              <p className="col flow-text offset-s4">Profile Info</p>
+              <p className="col flow-text offset-s4 hide-on-small-only">Profile Info</p>
 
               <div className="col offset-s1 s10 input-field">
                 <input type="text" value="Mark Heidmets" Style={themeText}/>

@@ -9,8 +9,8 @@ const Home = (props) => {
   const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
 
   const postList = posts.length ? posts.map(post =>
-    <div className="card hoverable center post" key={post.id} Style={`color: ${theme.text}`}>
-      <div className="card-content" Style={`background: ${theme.els}`}>
+    <div className="card hoverable center post" key={post.id} Style={`color: ${theme.text}; background: ${theme.els}`}>
+      <div className="card-content">
         <span className="card-title"><Link to={`/${post.id}`} Style={`color: ${theme.text}`}>{post.title}</Link></span>
         <p>{post.body}</p>
         <br/>
