@@ -27,7 +27,7 @@ const ModifyPost = (props) => {
 
         <div className="row container new-post-inputs">
 
-          <p className="flow-text col offset-s4">Modify your post</p>
+          <p className="flow-text">Modify your post</p>
 
           <div className="input-field col s10 offset-s1" >
             <input placeholder="Title" value={title} Style={`color: ${theme.text}`} required id="title" type="text" onChange={(e) => {setTitle(e.target.value)}}/>
@@ -39,9 +39,7 @@ const ModifyPost = (props) => {
             <label className="active">Content</label>
           </div>
 
-          <div className="col offset-s4">
-            <button type="submit" className="btn yellow darken-3">submit changes</button>
-          </div>
+          <button type="submit" className="col s4 m2 offset-m5 offset-s4 btn yellow darken-3">submit</button>
 
         </div>
 

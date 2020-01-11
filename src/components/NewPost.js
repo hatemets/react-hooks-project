@@ -22,9 +22,9 @@ const NewPost = (props) => {
     <div className="container center white z-depth-2 hoverable">
       <form id="new-post" onSubmit={handleSubmit} Style={`background: ${theme.els}`}>
 
-        <div className="row container new-post-inputs">
+        <div className="row container center-align new-post-inputs">
 
-          <p className="flow-text col offset-s4" Style={`color: ${theme.text}`}>Create a new post</p>
+          <p className="flow-text" Style={`color: ${theme.text}`}>Create a new post</p>
 
           <div className="input-field col s10 offset-s1">
             <input Style={`color: ${theme.text}`} required id="title" Style={`color: ${theme.text}`} type="text" onChange={(e) => {setTitle(e.target.value)}}/>
@@ -36,7 +36,7 @@ const NewPost = (props) => {
             <label htmlFor="content" Style={`color: ${theme.text}`}>Content</label>
           </div>
 
-          <button type="submit" className="btn green col s6 m3 offset-s3 offset-m5">add post</button>
+          <button type="submit" className="btn green">add post</button>
 
         </div>
 

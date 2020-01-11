@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <div id="profile" className="container row" Style={`${themeText}; ${themeBackground}`}>
 
-        <img className="profile-pic col s6 responsive-img" src={require('../media/resort.jpg')} alt="profile pic"/>
+        <img className="profile-pic col s10 offset-s1 m6 responsive-img" src={require('../media/resort.jpg')} alt="profile pic"/>
 
         <div className="col m6 s12">
             <form className="row">
