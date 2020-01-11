@@ -21,7 +21,7 @@ const Navbar = () => {
     <header>
       <nav className="navbar" Style={`background-color: ${theme.els}`}>
         <div className="container">
-          <Link to='/' className="brand-logo" Style={`color: ${theme.text}`}>Dog Food</Link>
+          <Link to='/' className="brand-logo hide-on-small-only" Style={`color: ${theme.text}`}>Dog Food</Link>
           <Link to='/' className="sidenav-trigger" data-target="mobile-nav">
             <i className="material-icons" Style={`color: ${theme.text}`}>menu</i>
           </Link>
