@@ -6,11 +6,11 @@ export const postContext = createContext();
 const PostContextProvider = (props) => {
   const [posts, dispatch] = useReducer(rootReducer, [], () => {
     const localData = localStorage.getItem('posts');
-    return localData ? JSON.parse(localData) : []
+    return localData ? JSON.parse(localData) : [];
   })
 
   useEffect(() => {
-    localStorage.setItem('posts', JSON.stringify(posts))
+    localStorage.setItem('posts', JSON.stringify(posts));
   })
 
   return (
