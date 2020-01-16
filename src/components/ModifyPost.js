@@ -11,8 +11,8 @@ const ModifyPost = (props) => {
   const [title, setTitle] = useState(post.title);
   const [body, setBody] = useState(post.body);
 
-  const {theme: genTheme} = useContext(themeContext)
-  const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
+  const {theme} = useContext(themeContext);
+  const t = theme.isLight ? theme.light : theme.dark;
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -22,7 +22,7 @@ const ModifyPost = (props) => {
   }
 
   return (
-    <div id="modify" className="container center z-depth-2 hoverable" Style={`background: ${theme.els}; color: ${theme.text}`}>
+    <div id="modify" className="container center z-depth-2 hoverable" Style={`background: ${t.els}; color: ${t.text}`}>
       <form onSubmit={handleSubmit}>
 
         <div className="row container new-post-inputs">
@@ -30,12 +30,12 @@ const ModifyPost = (props) => {
           <p className="flow-text">Modify your post</p>
 
           <div className="input-field col s10 offset-s1" >
-            <input placeholder="Title" value={title} Style={`color: ${theme.text}`} required id="title" type="text" onChange={(e) => {setTitle(e.target.value)}}/>
+            <input placeholder="Title" value={title} Style={`color: ${t.text}`} required id="title" type="text" onChange={(e) => {setTitle(e.target.value)}}/>
             <label className="active">Title</label>
           </div>
 
           <div className="input-field col s10 offset-s1">
-            <textarea placeholder="Content" value={body} Style={`color: ${theme.text}`} required id="content" className="materialize-textarea" onChange={(e) => {setBody(e.target.value)}} type="text"/>
+            <textarea placeholder="Content" value={body} Style={`color: ${t.text}`} required id="content" className="materialize-textarea" onChange={(e) => {setBody(e.target.value)}} type="text"/>
             <label className="active">Content</label>
           </div>
 

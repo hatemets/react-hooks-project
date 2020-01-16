@@ -3,5 +3,3 @@ export const themes = {
   dark: {bg: '#333333', text: '#ffffff', els: '#555555'}
 }
 
-console.log(themes);
-

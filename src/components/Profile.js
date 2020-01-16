@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { themeContext } from '../contexts/ThemeContext'
 
 const Profile = () => {
-  const {theme: genTheme} = useContext(themeContext)
-  const theme = genTheme.isLight ? genTheme.light : genTheme.dark;
-  let themeText = `color: ${theme.text}`;
-  let themeBackground = `background: ${theme.els}`;
+  const {theme} = useContext(themeContext);
+  const t = theme.isLight ? theme.light : theme.dark;
+  let themeText = `color: ${t.text}`;
+  let themeBackground = `background: ${t.els}`;
 
   return (
     <div id="profile" className="container row" Style={`${themeText}; ${themeBackground}`}>
