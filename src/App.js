@@ -8,6 +8,7 @@ import PostDetails from './components/PostDetails'
 import NewPost from './components/NewPost'
 import ModifyPost from './components/ModifyPost'
 import Profile from './components/Profile'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 const App = () => {
   return (
@@ -15,15 +16,19 @@ const App = () => {
       <div className="App">
         <ThemeContextProvider>
           <Navbar />
-            <PostContextProvider>
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/new_post' component={NewPost} />
-                <Route path='/profile' component={Profile} />
-                <Route path='/:post_id/modify_post' component={ModifyPost} />
-                <Route path='/:post_id' component={PostDetails} />
-              </Switch>
-            </PostContextProvider>
+          <TransitionGroup>
+            <CSSTransition timeout={400} className="fade">
+              <PostContextProvider>
+                <Switch>
+                  <Route exact path='/' component={Home} />
+                  <Route path='/new_post' component={NewPost} />
+                  <Route path='/profile' component={Profile} />
+                  <Route path='/:post_id/modify_post' component={ModifyPost} />
+                  <Route path='/:post_id' component={PostDetails} />
+                </Switch>
+              </PostContextProvider>
+            </CSSTransition>
+          </TransitionGroup>
         </ThemeContextProvider>
       </div>
     </BrowserRouter>

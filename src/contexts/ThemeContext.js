@@ -13,7 +13,6 @@ const ThemeContextProvider = (props) => {
     }, () => {
         let localColor = JSON.parse(localStorage.getItem('themeColor'));
         let localData = {light, dark, isLight: localColor};
-        console.log(localData);
         return localData ? localData : {light, dark, isLight: true};
     })
 

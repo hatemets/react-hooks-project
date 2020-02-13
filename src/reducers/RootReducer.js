@@ -1,4 +1,4 @@
-const randomId = require('random-id')
+const randomId = require('random-id');
 
 const rootReducer = (state, action) => {
   switch (action.type) {

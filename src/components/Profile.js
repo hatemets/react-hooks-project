@@ -19,12 +19,12 @@ const Profile = () => {
               <p className="col flow-text offset-s4 hide-on-small-only">Profile Info</p>
 
               <div className="col offset-s1 s10 input-field">
-                <input type="text" value="Mark Heidmets" Style={themeText}/>
+                <input type="text" value="John Jakeson" Style={themeText}/>
                 <label className="active" Style={themeText}>Username</label>
               </div>
 
               <div className="col offset-s1 s10 input-field">
-                <input type="text" value="mark.heidmets@gmail.com" Style={themeText}/>
+                <input type="text" value="some.email@mail.com" Style={themeText}/>
                 <label className="active" Style={themeText}>Email</label>
               </div>
 
